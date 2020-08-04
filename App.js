@@ -11,11 +11,16 @@ const navigator = createStackNavigator(
     List: ListScreen
   },
   {
-    initialRouteName: "List",
+    initialRouteName: "Home",
     defaultNavigationOptions: {
       title: "App",
       headerTitleAlign: 'center',
-      headerStyle: {backgroundColor: '#777'}
+      headerStyle: {backgroundColor: '#7ab658'},
+      headerTitleStyle: {
+        fontSize: 30, 
+        color: '#444', 
+        fontWeight: 'bold'
+      }
     }
   }
 );
