@@ -1,30 +1,30 @@
 import React from "react";
 import { Text, StyleSheet, View, Button, TouchableOpacity } from "react-native";
 
-const HomeScreen = () => {
+const HomeScreen = (props) => {
   return (
     <View>
       <Text style={styles.textStyle}>
         HomeScreen
       </Text>
       
-      <View style={{paddingHorizontal: 20, paddingVertical: 10}}>
+      <View style={styles.buttonCustomStyle}>
         <Button
           title="Go to Components Demo"
           onPress={()=>{
-            console.log('Button Pressed')
+            props.navigation.navigate('Components')
           }}
         />
       </View>
       
-      <TouchableOpacity 
-        onPress={()=>{
-          console.log('List Pressed')
-        }}>
-        <Text style={styles.buttonTextStyle}>
-          Go to List Demo
-        </Text>
-      </TouchableOpacity>
+      <View style={styles.buttonCustomStyle}>
+        <Button
+          title="Go to List Demo"
+          onPress={()=>{
+            props.navigation.navigate('List')
+          }}
+        />
+      </View>
     </View>
   )
 };
@@ -36,14 +36,9 @@ const styles = StyleSheet.create({
     padding: 5,
     fontWeight: 'bold'
   },
-  buttonTextStyle: {
-    fontSize: 20,
-    alignSelf: "center",
-    fontWeight: 'bold',
-    borderColor: 'blue',
-    borderWidth: 1,
-    paddingHorizontal: 30,
-    paddingVertical: 5  
+  buttonCustomStyle: {
+    paddingHorizontal: 20, 
+    paddingVertical: 10
   }
 });
 
