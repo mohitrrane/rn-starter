@@ -25,6 +25,15 @@ const HomeScreen = (props) => {
           }}
         />
       </View>
+
+      <View style={styles.buttonCustomStyle}>
+        <Button
+          title="Go to Image Demo"
+          onPress={()=>{
+            props.navigation.navigate('Image')
+          }}
+        />
+      </View>
     </View>
   )
 };
