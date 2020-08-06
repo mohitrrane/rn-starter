@@ -43,6 +43,15 @@ const HomeScreen = (props) => {
           }}
         />
       </View>
+
+      <View style={styles.buttonCustomStyle}>
+        <Button
+          title="Go to Color Demo"
+          onPress={()=>{
+            props.navigation.navigate('Color')
+          }}
+        />
+      </View>
     </View>
   )
 };
