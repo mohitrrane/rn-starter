@@ -52,6 +52,15 @@ const HomeScreen = (props) => {
           }}
         />
       </View>
+
+      <View style={styles.buttonCustomStyle}>
+        <Button
+          title="Go to Square Demo"
+          onPress={()=>{
+            props.navigation.navigate('Square')
+          }}
+        />
+      </View>
     </View>
   )
 };
