@@ -1,9 +1,9 @@
 import React from "react";
-import { Text, StyleSheet, View, Button, TouchableOpacity } from "react-native";
+import { Text, StyleSheet, ScrollView, View, Button, TouchableOpacity } from "react-native";
 
 const HomeScreen = (props) => {
   return (
-    <View>
+    <ScrollView>
       <Text style={styles.textStyle}>
         HomeScreen
       </Text>
@@ -70,7 +70,16 @@ const HomeScreen = (props) => {
           }}
         />
       </View>
-    </View>
+
+      <View style={styles.buttonCustomStyle}>
+        <Button
+          title="Go to Text Demo"
+          onPress={()=>{
+            props.navigation.navigate('Text')
+          }}
+        />
+      </View>
+    </ScrollView>
   )
 };
 
