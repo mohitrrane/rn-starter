@@ -79,6 +79,15 @@ const HomeScreen = (props) => {
           }}
         />
       </View>
+
+      <View style={styles.buttonCustomStyle}>
+        <Button
+          title="Go to Box Object Model Demo"
+          onPress={()=>{
+            props.navigation.navigate('Box')
+          }}
+        />
+      </View>
     </ScrollView>
   )
 };
