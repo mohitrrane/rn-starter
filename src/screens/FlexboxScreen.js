@@ -25,6 +25,7 @@ const styles = StyleSheet.create({
         borderColor: 'red',
         flex: 1,
         position: 'absolute', //(default) other options absolute
+        top: 10 // Options are top, bottom, left, right
     },
     textTwoStyle: {
         borderWidth: 1,
