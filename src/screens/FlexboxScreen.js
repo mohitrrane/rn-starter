@@ -3,11 +3,18 @@ import { View, Text, StyleSheet } from 'react-native'
 
 const FlexboxScreen = () => {
     return (
-        <View style={styles.viewStyle}>
-            <Text style={styles.textOneStyle}>Child #1</Text>
-            <Text style={styles.textTwoStyle}>Child #2</Text>
-            <Text style={styles.textThreeStyle}>Child #3</Text>
-        </View>
+        <>
+            <View style={styles.viewStyle}>
+                <Text style={styles.textOneStyle}>Child #1</Text>
+                <Text style={styles.textTwoStyle}>Child #2</Text>
+                <Text style={styles.textThreeStyle}>Child #3</Text>
+            </View>
+            <View>
+                <View style={styles.orangeBoxStyle}></View>
+                <View style={styles.violetBoxStyle}></View>
+                <View style={styles.greenBoxStyle}></View>
+            </View>
+        </>
     )
 }
 
@@ -40,6 +47,30 @@ const styles = StyleSheet.create({
         borderColor: 'red',
         flex: 3,
         alignSelf: 'flex-start'
+    },
+    orangeBoxStyle: {
+        position: 'absolute',
+        height: 70,
+        width: 70,
+        backgroundColor: 'orange',
+        borderWidth: 1,
+        borderColor: 'black'
+    },
+    violetBoxStyle: {
+        alignSelf: 'flex-end',
+        height: 70,
+        width: 70,
+        backgroundColor: 'violet',
+        borderWidth: 1,
+        borderColor: 'black'
+    },
+    greenBoxStyle: {
+        alignSelf: 'center',
+        height: 70,
+        width: 70,
+        backgroundColor: 'green',
+        borderWidth: 1,
+        borderColor: 'black'
     }
 })
 
