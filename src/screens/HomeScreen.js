@@ -88,6 +88,14 @@ const HomeScreen = (props) => {
           }}
         />
       </View>
+      <View style={styles.buttonCustomStyle}>
+        <Button
+          title="Go to Flex Box Demo"
+          onPress={()=>{
+            props.navigation.navigate('Flex')
+          }}
+        />
+      </View>
     </ScrollView>
   )
 };
