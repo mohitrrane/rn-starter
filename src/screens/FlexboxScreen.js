@@ -22,10 +22,11 @@ const styles = StyleSheet.create({
     },
     textOneStyle: {
         borderWidth: 1,
-        borderColor: 'red',
+        borderColor: 'blue',
         flex: 1,
-        position: 'absolute', //(default) other options absolute
-        top: 10 // Options are top, bottom, left, right
+        ...StyleSheet.absoluteFillObject
+        //position: 'absolute', //(default) other options absolute
+        //top: 10 // Options are top, bottom, left, right
     },
     textTwoStyle: {
         borderWidth: 1,
