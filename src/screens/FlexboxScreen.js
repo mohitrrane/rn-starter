@@ -24,7 +24,8 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: 'blue',
         flex: 1,
-        ...StyleSheet.absoluteFillObject
+        ...StyleSheet.absoluteFillObject // Condenses position: 'absolute' 
+                                        //and top, bottom, left, right (all): 0; 
         //position: 'absolute', //(default) other options absolute
         //top: 10 // Options are top, bottom, left, right
     },
